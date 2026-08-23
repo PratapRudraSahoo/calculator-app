@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator App</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Calculator App</h1>
+
+    <form method="POST">
+
+        <input type="number"
+               step="any"
+               name="num1"
+               placeholder="Enter Number 1"
+               required>
+
+        <input type="number"
+               step="any"
+               name="num2"
+               placeholder="Enter Number 2"
+               required>
+
+        <select name="operation">
+            <option value="+">Addition</option>
+            <option value="-">Subtraction</option>
+            <option value="*">Multiplication</option>
+            <option value="/">Division</option>
+        </select>
+
+        <button type="submit">
+            Calculate
+        </button>
+
+    </form>
+
+    <div class="result">
+        Result: {{ result }}
+    </div>
+
+</div>
+
+</body>
+</html>
